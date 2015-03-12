@@ -1,0 +1,51 @@
+// Page menu
+block topnavigation
+ - var header = []
+ - header.pageNav = []
+
+   - header.pageNav[0] = []
+     - header.pageNav[0][0] = { name: 'журнал диалогов', url: 'correspondence/journal-of-dialogues.html' }
+       - header.pageNav[0][0][0] = { name: 'нет диалогов', url: 'correspondence/no-dialogue.html' }
+     - header.pageNav[0][1] = { name: 'диалог для клиента', url: '' }
+       - header.pageNav[0][1][0] = { name: 'новый диалог', url: 'correspondence/new-dialogue.html' }
+         - header.pageNav[0][1][0][0] = { name: 'один к/а + тема Другое', url: 'correspondence/new-dialogue_custom.html' }
+       - header.pageNav[0][1][1] = { name: 'thank you', url: 'correspondence/thank-you.html' }
+       - header.pageNav[0][1][2] = { name: 'ожидание ответа', url: 'correspondence/waiting-for-reply.html' }
+       - header.pageNav[0][1][3] = { name: 'отправка сообщения', url: 'correspondence/send-message.html' }
+       - header.pageNav[0][1][4] = { name: 'новое входящее', url: 'correspondence/new-incoming.html' }
+         - header.pageNav[0][1][4][0] = { name: 'новое входящее - развёрнутый', url: 'correspondence/new-incoming_full.html' }
+       - header.pageNav[0][1][5] = { name: 'сообщение не было отправлено', url: 'correspondence/message-not-send.html' }
+     - header.pageNav[0][2] = { name: 'диалог для менеджера (ГП)', url: 'correspondence/dialogue-for-manager.html' }
+
+
+   - header.pageNav[1] = []
+     - header.pageNav[1][0] = { name: 'журнал запросов', url: 'agreement-of-treaties/query-log/' }
+       - header.pageNav[1][0][0] = { name: 'нет запросов', url: 'agreement-of-treaties/query-log/no-query.html' }
+
+     - header.pageNav[1][1] = { name: 'форма запроса', url: '' }
+       - header.pageNav[1][1][0] = { name: 'начальная (протокол разногласий)', url: 'agreement-of-treaties/form-of-request/initial-report-of-disagreements.html' }
+       - header.pageNav[1][1][1] = { name: 'доп. соглашение', url: 'agreement-of-treaties/form-of-request/supplementary-agreement.html' }
+       - header.pageNav[1][1][2] = { name: 'поля опроса', url: 'agreement-of-treaties/form-of-request/field-of-poll.html' }
+       - header.pageNav[1][1][3] = { name: 'один к/а', url: 'agreement-of-treaties/form-of-request/one-ka.html' }
+       - header.pageNav[1][1][4] = { name: 'файл загружен', url: 'agreement-of-treaties/form-of-request/file-is-loaded.html' }
+       - header.pageNav[1][1][5] = { name: 'ещё один файл загружен', url: 'agreement-of-treaties/form-of-request/and-one-file-is-loaded.html' }
+       - header.pageNav[1][1][6] = { name: 'уже есть запрос', url: 'agreement-of-treaties/form-of-request/already-have-an-inquiry.html' }
+
+     - header.pageNav[1][2] = { name: 'успешно создан', url: 'agreement-of-treaties/form-of-request/successfully-created.html' }
+
+     - header.pageNav[1][3] = { name: 'карточка запроса', url: '' }
+       - header.pageNav[1][3][0] = { name: 'протокол разногласий - согл с замеч', url: 'agreement-of-treaties/card-request/agreed-with-the-comments.html' }
+       - header.pageNav[1][3][1] = { name: 'доп соглашение - на рассмотрение', url: 'agreement-of-treaties/card-request/under-consideration.html' }
+       - header.pageNav[1][3][2] = { name: 'протокол разногласий - согласование без замеч', url: 'agreement-of-treaties/card-request/agreed-without-the-comments.html' }
+       - header.pageNav[1][3][3] = { name: 'протокол разногласий - отказано', url: 'agreement-of-treaties/card-request/denied.html' }
+       - header.pageNav[1][3][4] = { name: 'протокол разногласий - снято', url: 'agreement-of-treaties/card-request/withdrawn.html' }
+
+
+   - header.pageNav[2] = []
+     - header.pageNav[2][0] = { name: 'Акции', url: 'help-center/actions/' }
+       - header.pageNav[2][0][0] = { name: 'Акции выбран город', url: 'help-center/actions/' }
+     - header.pageNav[2][1] = { name: 'Центр помощи начальная', url: 'help-center/help-center-initial.html' }
+     - header.pageNav[2][2] = { name: 'Выдача', url: 'help-center/issuance/' }
+
+
+ include nav-constructor

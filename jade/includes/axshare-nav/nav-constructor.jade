@@ -1,0 +1,28 @@
+
+if header
+  if header.pageNav
+
+    .axshare-page-nav
+
+      each val, index in header.pageNav
+        - var current = index
+
+        ul.axshare-page-list
+          each val, index in header.pageNav[ current ]
+            - var deepCurrent = index
+
+            if val.name != undefined
+              if val.name.length > 0
+                li.axshare-page-list__item
+                  a.axshare-page-link.axshare-text-easy.link_underline(href= '/#{ val.url }')= val.name
+
+
+                  if header.pageNav[ current ][ deepCurrent ]
+                    ul.axshare-page-list.axshare-page-list_second-level
+
+                      each val, index in header.pageNav[ current ][ deepCurrent ]
+                        if val.name != undefined
+                          if val.name.length > 0
+
+                            li.axshare-page-list__item
+                              a.axshare-page-link.axshare-text-easy.link_underline(href= '/#{ val.url }')= val.name
