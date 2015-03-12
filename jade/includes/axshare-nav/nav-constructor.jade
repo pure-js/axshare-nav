@@ -1,4 +1,17 @@
 
+// Ul li {}
+mixin list( obj )
+  if obj.name != undefined
+    if obj.name.length > 0
+      li.axshare-page-list__item
+        if obj.url
+          - var attributes = { 'href': obj.url }
+        else
+          - var attributes = ''
+        a.axshare-page-link.axshare-text-easy&attributes( attributes )= obj.name
+
+
+// Ul {}
 if header
   if header.pageNav
 
@@ -7,28 +20,25 @@ if header
       each val, index in header.pageNav
         - var current = index
 
-        ul.axshare-page-list
-          each val, index in header.pageNav[ current ]
-            - var deepCurrent = index
+        if header.pageNav[ current ]
+          ul.axshare-page-list
+            each val, index in header.pageNav[ current ]
+              - var deepCurrent = index
 
-            if val.name != undefined
-              if val.name.length > 0
-                li.axshare-page-list__item
+              +list( val )
 
-                  if val.url
-                    - var attributes = { 'href': val.url }
-                  else
-                    - var attributes = ''
+              if header.pageNav[ current ][ deepCurrent ]
+                ul.axshare-page-list.axshare-page-list_second-level
 
-                  a.axshare-page-link.axshare-text-easy&attributes( attributes )= val.name
+                  each val, index in header.pageNav[ current ][ deepCurrent ]
+                    - var moreDeepCurrent = index
 
+                    +list( val )
 
-                  if header.pageNav[ current ][ deepCurrent ]
-                    ul.axshare-page-list.axshare-page-list_second-level
+                    if header.pageNav[ current ][ deepCurrent ][ moreDeepCurrent ]
+                      ul.axshare-page-list.axshare-page-list_second-level
 
-                      each val, index in header.pageNav[ current ][ deepCurrent ]
-                        if val.name != undefined
-                          if val.name.length > 0
+                        each val, index in header.pageNav[ current ][ deepCurrent ][ moreDeepCurrent ]
+                          - var moreMoreDeepCurrent = index
 
-                            li.axshare-page-list__item
-                              a.axshare-page-link.axshare-text-easy(href= '/#{ val.url }')= val.name
+                          +list( val )
