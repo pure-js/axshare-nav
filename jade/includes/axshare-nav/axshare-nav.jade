@@ -1,9 +1,10 @@
 // Page menu
 block topnavigation
- - var header = []
- - header.pageNav = []
+  - var header = []
+  - header.pageNav = []
 
-   - header.pageNav[0] = []
+    - header.pageNav[0] = []
+      - header.pageNav[0][0] = { name: 'First page', url: '' }
 
 
- include nav-constructor
+  include nav-constructor
