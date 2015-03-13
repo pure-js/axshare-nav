@@ -5,7 +5,7 @@ mixin list( obj )
     if obj.name.length > 0
       li.axshare-page-list__item
         if obj.url
-          - var attributes = { 'href': obj.url }
+          - var attributes = { 'href': '/' + obj.url }
         else
           - var attributes = ''
         a.axshare-page-link.axshare-text-easy&attributes( attributes )= obj.name
