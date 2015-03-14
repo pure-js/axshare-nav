@@ -18,27 +18,26 @@ if header
     .axshare-page-nav
 
       each val, index in header.pageNav
-        - var current = index
+        - var current = val
 
-        if header.pageNav[ current ]
-          ul.axshare-page-list
-            each val, index in header.pageNav[ current ]
-              - var deepCurrent = index
+        ul.axshare-page-list
 
-              +list( val )
+          each val, index in current
+            - var deepCurrent = val
 
-              if header.pageNav[ current ][ deepCurrent ]
-                ul.axshare-page-list.axshare-page-list_second-level
+            +list( val )
 
-                  each val, index in header.pageNav[ current ][ deepCurrent ]
-                    - var moreDeepCurrent = index
+            if deepCurrent
+              ul.axshare-page-list.axshare-page-list_second-level
 
-                    +list( val )
+                each val, index in deepCurrent
+                  - var moreDeepCurrent = val
 
-                    if header.pageNav[ current ][ deepCurrent ][ moreDeepCurrent ]
-                      ul.axshare-page-list.axshare-page-list_second-level
+                  +list( val )
 
-                        each val, index in header.pageNav[ current ][ deepCurrent ][ moreDeepCurrent ]
-                          - var moreMoreDeepCurrent = index
+                  if moreDeepCurrent
+                    ul.axshare-page-list.axshare-page-list_second-level
 
-                          +list( val )
+                      each val, index in moreDeepCurrent
+
+                        +list( val )
