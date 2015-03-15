@@ -1,43 +1,18 @@
 
-// Ul li {}
 mixin list( obj )
-  if obj.name != undefined
-    if obj.name.length > 0
-      li.axshare-page-list__item
-        if obj.url
-          - var attributes = { 'href': '/' + obj.url }
-        else
-          - var attributes = ''
-        a.axshare-page-link.axshare-text-easy&attributes( attributes )= obj.name
+  ul.axshare-page-list
+    each val in obj
+      if val.name
+        li.axshare-page-list__item
+          if val.url
+            - var url = '/' + val.url
+          a.axshare-page-link.axshare-text-easy(href= url)= val.name
+            if val.child
+              +list( val )
 
 
 // Ul {}
-if header
-  if header.pageNav
+if axshare.nav
+  .axshare-page-nav
+    +list( axshare.nav )
 
-    .axshare-page-nav
-
-      each val, index in header.pageNav
-        - var current = val
-
-        ul.axshare-page-list
-
-          each val, index in current
-            - var deepCurrent = val
-
-            +list( val )
-
-            if deepCurrent
-              ul.axshare-page-list.axshare-page-list_second-level
-
-                each val, index in deepCurrent
-                  - var moreDeepCurrent = val
-
-                  +list( val )
-
-                  if moreDeepCurrent
-                    ul.axshare-page-list.axshare-page-list_second-level
-
-                      each val, index in moreDeepCurrent
-
-                        +list( val )

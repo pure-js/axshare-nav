@@ -22,11 +22,13 @@ $white: #ffffff;
   overflow: hidden;
   padding: 5px 20px 25px;
   margin: 0;
+
+  .axshare-page-list {
+    padding: 2px 0 5px 20px;
+  }
 }
 
-  .axshare-page-list_second-level {
-    padding: 2px 0 5px 25px;
-  }
+
 
   .axshare-page-list__item {
     list-style: none;
