@@ -1,0 +1,13 @@
+{
+  "name": "axshare-nav",
+  "version": "0.0.1",
+  "authors": [
+    "IamEmpty <dustonroad@gmail.com>"
+  ],
+  "description": "Navigation menu for axshare projects. Using jade + SCSS",
+  "main": "jade/includes/axshare-nav/nav-constructor.jade",
+  "keywords": [
+    "axshare"
+  ],
+  "license": "MIT"
+}
