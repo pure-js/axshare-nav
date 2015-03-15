@@ -1,6 +1,6 @@
 {
   "name": "axshare-nav",
-  "version": "v0.0.1",
+  "version": "v0.0.2",
   "description": "Navigation menu for axshare projects. Using jade + SCSS",
   "main": "jade/includes/axshare-nav/nav-constructor.jade",
   "scripts": {
