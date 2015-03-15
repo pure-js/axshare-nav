@@ -1,4 +1,9 @@
-# Created by .ignore support plugin (hsz.mobi)
 
 # WebStorm files
 .idea
+
+# npm debug file
+npm-debug.log
+
+# node modules
+node_modules

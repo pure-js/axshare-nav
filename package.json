@@ -1,0 +1,25 @@
+{
+  "name": "axshare-nav",
+  "version": "0.0.1",
+  "description": "Navigation menu for axshare projects. Using jade + SCSS",
+  "main": "jade/includes/axshare-nav/nav-constructor.jade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IamEmpty/axshare-nav.git"
+  },
+  "keywords": [
+    "axshare"
+  ],
+  "author": "IamEmpty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IamEmpty/axshare-nav/issues"
+  },
+  "homepage": "https://github.com/IamEmpty/axshare-nav",
+  "devDependencies": {
+    "jade": "^1.9.2"
+  }
+}

@@ -1,2 +1,5 @@
-# Begin
-Just copy all files from this folder to project folder
+# Installation
+Install this package using following command:
+```
+bower install axshare-nav
+```
