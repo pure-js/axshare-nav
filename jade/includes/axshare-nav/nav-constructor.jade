@@ -7,7 +7,7 @@ mixin list( obj )
           if val.url
             - var url = '/' + val.url
           a.axshare-page-link.axshare-text-easy(href= url)= val.name
-            if val.child
+            if val[0]
               +list( val )
 
 
@@ -15,4 +15,3 @@ mixin list( obj )
 if axshare.nav
   .axshare-page-nav
     +list( axshare.nav )
-
