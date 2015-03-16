@@ -1,0 +1,29 @@
+/*------- Navigation -------*/
+
+.axshare-page-nav {
+  position: fixed;
+  background: $white;
+  width: 400px;
+  top: 0;
+  box-shadow: 12px 0 20px rgba(0, 0, 0, .15);
+  height: 100%;
+  z-index: 1000;
+}
+
+.axshare-page-list {
+  overflow: hidden;
+  padding: 5px 20px 25px;
+  margin: 0;
+
+  .axshare-page-list {
+    padding: 2px 0 5px 20px;
+  }
+}
+
+
+
+.axshare-page-list__item {
+  list-style: none;
+}
+
+.axshare-page-link {}
