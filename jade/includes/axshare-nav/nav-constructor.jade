@@ -4,8 +4,11 @@ mixin list( obj )
     each val in obj
       if val.name
         li.axshare-page-list__item
+          - var url = val.url
           if val.url
-            - var url = '/' + val.url
+            if val.url.length > 1
+              - url = '/' + url
+
           a.axshare-page-link.axshare-text-easy(href= url)= val.name
             if val[0]
               +list( val )
