@@ -1,13 +1,15 @@
 {
   "name": "axshare-nav",
-  "version": "v0.0.3",
+  "version": "v0.0.4",
   "authors": [
     "IamEmpty <dustonroad@gmail.com>"
   ],
   "description": "Navigation menu for axshare projects. Using jade + SCSS",
-  "main": "jade/includes/axshare-nav/nav-constructor.jade",
+  "main": "README.md",
   "keywords": [
-    "axshare"
+    "axshare",
+    "share.axure",
+    "axure"
   ],
   "repository": {
     "type": "git",
