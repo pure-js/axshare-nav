@@ -4,9 +4,10 @@ var gulp = require('gulp'),
 
 
 var paths = {
-  scss: [ 'stylesheets/**/*.scss' ],
+  scss: [ 'SCSS/**/*.scss' ],
   jade: 'examples/*.jade',
-  fonts: 'fonts/*.{ttf,woff,eof,svg,eot}'
+  fonts: 'fonts/*.{ttf,woff,eof,svg,eot}',
+  build: 'build/'
 };
 
 
@@ -16,18 +17,18 @@ gulp.task( 'html', function() {
       basedir: './',
       pretty: true
     }))
-    .pipe(gulp.dest( 'examples-build/' ))
+    .pipe(gulp.dest( paths.build ))
 });
 
 gulp.task( 'css', function () {
-  gulp.src( 'stylesheets/axshare-nav.scss' )
+  gulp.src( 'SCSS/axshare-nav.scss' )
     .pipe(sass())
-    .pipe(gulp.dest( 'examples-build/' ));
+    .pipe(gulp.dest( paths.build ));
 });
 
 gulp.task( 'copy-fonts', function() {
   gulp.src( paths.fonts )
-    .pipe(gulp.dest( 'examples-build/fonts/' ));
+    .pipe(gulp.dest( paths.build + 'fonts/' ));
 });
 
 

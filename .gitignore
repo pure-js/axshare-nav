@@ -8,5 +8,8 @@ npm-debug.log
 # node modules
 node_modules
 
-# Builds
-examples-build
+# Build
+build
+
+# Distr
+dist
