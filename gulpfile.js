@@ -4,8 +4,8 @@ var gulp = require('gulp'),
 
 
 var paths = {
-  scss: [ 'SCSS/**/*.scss' ],
-  jade: 'examples/*.jade',
+  cssWatch: [ 'SCSS/**/*.scss' ],
+  htmlWatch: [ 'examples/*.jade', 'jade/*.jade'],
   fonts: 'fonts/*.{ttf,woff,eof,svg,eot}',
   build: 'build/'
 };
@@ -34,8 +34,8 @@ gulp.task( 'copy-fonts', function() {
 
 // Rerun the task when a file changes
 gulp.task( 'watch', function() {
-  gulp.watch( paths.scss, [ 'css' ]);
-  gulp.watch( paths.jade, [ 'html' ]);
+  gulp.watch( paths.cssWatch, [ 'css' ]);
+  gulp.watch( paths.htmlWatch, [ 'html' ]);
 });
 
 
