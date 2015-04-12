@@ -16,7 +16,8 @@
     "url": "https://github.com/IamEmpty/axshare-nav.git"
   },
   "ignore": [
-    ".idea"
+    ".idea",
+    "node_modules"
   ],
   "license": "MIT",
   "homepage": "https://github.com/IamEmpty/axshare-nav"

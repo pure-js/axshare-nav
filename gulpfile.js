@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
   jade = require('gulp-jade'),
-  sass = require('gulp-sass');
+  stylus = require('gulp-stylus');
 
 
 var paths = {
@@ -20,9 +20,9 @@ gulp.task( 'html', function() {
     .pipe(gulp.dest( paths.build ))
 });
 
-gulp.task( 'css', function () {
+gulp.task( 'css', function() {
   gulp.src( 'SCSS/axshare-nav.scss' )
-    .pipe(sass())
+    .pipe(stylus())
     .pipe(gulp.dest( paths.build ));
 });
 
