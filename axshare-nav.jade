@@ -2,13 +2,16 @@
 mixin list( obj )
   ul.axshare-page-list
     each val in obj
-      - var url = '/' + val.url
       if val.name
         li.axshare-page-list__item
-          a.axshare-page-link.axshare-text-easy(href= url)= val.name
+
+          if val.url
+            a.axshare-page-text.axshare-text-easy(href= val.url)= val.name
+          else
+            p.axshare-page-link.axshare-text-easy= val.name
+
           if val.childs
             +list( val.childs )
-
 
 // Ul {}
 if axshare.nav
