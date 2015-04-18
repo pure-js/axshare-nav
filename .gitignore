@@ -13,3 +13,6 @@ build
 
 # Distr
 dist
+
+# Scraped file
+# output.json
