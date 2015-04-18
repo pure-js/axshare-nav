@@ -15,4 +15,4 @@ build
 dist
 
 # Scraped file
-# output.json
+output.json
