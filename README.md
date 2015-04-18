@@ -1,7 +1,11 @@
-# Installation
+## Installation
 Install this package using following command:
 
     bower install axshare-nav --save-dev
+
+After that you need run
+
+	npm install
 
 Jade
 
@@ -21,3 +25,8 @@ If you using gulp, you should shure, in what you have a basedir
       pretty: true
     }))
 
+
+## Using
+Run the following command
+
+	node app/server.js
