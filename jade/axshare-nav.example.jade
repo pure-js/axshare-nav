@@ -2,45 +2,77 @@
 
 - var axshare = []
 - axshare.nav = []
-  - axshare.nav[0] = []
-    - axshare.nav[0].name = 'Inner pages'
-    - axshare.nav[0].childs = []
+  
+  - item = {}
+    - item.name = 'Inner pages'
+    - item.childs = []
+  - axshare.nav[0] = item
 
-      - axshare.nav[0].childs[0] = {}
-        - axshare.nav[0].childs[0].name = 'Success stories'
-        - axshare.nav[0].childs[0].childs = []
+      - item = {}
+        - item.name = 'Success stories'
+        - item.childs = []
+      - axshare.nav[0].childs[0] = item
 
           - item = {}
-            - item.name = 'Автоматизация оформления отправок'
+            - item.name = 'Autonation of delivery'
             - item.url = '#'
           - axshare.nav[0].childs[0].childs[0] = item
 
           - item = {}
-            - item.name = 'Информационная интеграция'
+            - item.name = 'Information integration'
             - item.url = '#'
           - axshare.nav[0].childs[0].childs[1] = item
 
           - item = {}
-            - item.name = 'Единая технология доставки грузов'
+            - item.name = 'United techology of delivering of shipments'
             - item.url = '#'
           - axshare.nav[0].childs[0].childs[2] = item
             
           - item = {}
-            - item.name = 'Исключительный груз'
+            - item.name = 'Exceptional shimpents'
             - item.url = '#'
           - axshare.nav[0].childs[0].childs[3] = item
+          
+          - item = {}
+            - item.name = 'Delivery to hypermarkets'
+            - item.url = '#'
+            - item.childs = []
+          - axshare.nav[0].childs[0].childs[4] = item
+            
+            - item = {}
+              - item.name = 'Доставка в гипермаркеты Калькулятор 2'
+              - item.url = '#'
+            - axshare.nav[0].childs[0].childs[4].childs[0] = item
+            
+          - item = {}
+            - item.name = 'Сортировка товаров Опросник'
+            - item.url = '#'
+          - axshare.nav[0].childs[0].childs[5] = item
+          
+          - item = {}
+            - item.name = 'Хранение сезонных товаров Калькулятор'
+            - item.url = '#'
+          - axshare.nav[0].childs[0].childs[6] = item
+          
+            - item = {}
+              - item.name = 'Хранение сезонных товаров Калькулятор 2'
+              - item.url = '#'
+            - axshare.nav[0].childs[0].childs[6][0] = item
+          
+          - item = {}
+            - item.name = 'Система «Донор» Опросник'
+            - item.url = '#'
+          - axshare.nav[0].childs[0].childs[7] = item
+          
+            - item = {}
+              - item.name = 'Система «Донор» Опросник 2'
+              - item.url = '#'
+            - axshare.nav[0].childs[0].childs[7][0] = item
 
-          - axshare.nav[0].childs[0].childs[4] = { name: 'Доставка в гипермаркеты Калькулятор', url: '#' }
-            - axshare.nav[0].childs[0].childs[4][0] = { name: 'Доставка в гипермаркеты Калькулятор 2', url: '#' }
-          - axshare.nav[0].childs[0].childs[5] = { name: 'Сортировка товаров Опросник', url: '#' }
-          - axshare.nav[0].childs[0].childs[6] = { name: 'Хранение сезонных товаров Калькулятор', url: '#' }
-            - axshare.nav[0].childs[0].childs[6][0] = { name: 'Хранение сезонных товаров Калькулятор 2', url: '#' }
-          - axshare.nav[0].childs[0].childs[7] = { name: 'Система «Донор» Опросник', url: '#' }
-            - axshare.nav[0].childs[0].childs[7][0] = { name: 'Система «Донор» Опросник 2', url: '#' }
-
-      - axshare.nav[0].childs[1] = {}
-        - axshare.nav[0].childs[1].name = 'Services'
-        - axshare.nav[0].childs[1].childs = []
+      - item = {}
+        - item.name = 'Services'
+        - item.childs = []
+      - axshare.nav[0].childs[1] = item
 
           - item = {}
             - item.name = 'Individual logistic'
@@ -62,5 +94,6 @@
             - item.url = '#'
           - axshare.nav[0].childs[1].childs[3] = item
 
-    - axshare.nav[1] = {}
-      - axshare.nav[1].name = 'Calculator of direction'
+    - item = {}
+      - item.name = 'Calculator of direction'
+    - axshare.nav[1] = item
