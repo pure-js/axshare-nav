@@ -1,18 +1,21 @@
 var gulp = require('gulp'),
   jade = require('gulp-jade'),
-  stylus = require('gulp-stylus');
+  stylus = require('gulp-stylus'),
+  connect = require('gulp-connect');
 
 
 var paths = {
-  cssWatch: [ 'SCSS/**/*.scss' ],
-  htmlWatch: [ 'examples/*.jade', 'jade/*.jade'],
+  html: [ 'pages/index.jade' ],
+  css: [ 'stylesheets/axshare-nav.styl' ],
+  htmlWatch: [ 'pages/*.jade', 'jade/*.jade'],
+  cssWatch: [ 'stylesheets/**/*.styl' ],
   fonts: 'fonts/*.{ttf,woff,eof,svg,eot}',
   build: 'build/'
 };
 
 
 gulp.task( 'html', function() {
-  gulp.src( 'examples/index.jade' )
+  gulp.src( paths.html )
     .pipe(jade({
       basedir: './',
       pretty: true
@@ -21,9 +24,9 @@ gulp.task( 'html', function() {
 });
 
 gulp.task( 'css', function() {
-  gulp.src( 'SCSS/axshare-nav.scss' )
+  gulp.src( paths.css )
     .pipe(stylus())
-    .pipe(gulp.dest( paths.build ));
+    .pipe(gulp.dest( paths.build + 'css/' ));
 });
 
 gulp.task( 'copy-fonts', function() {
@@ -39,6 +42,13 @@ gulp.task( 'watch', function() {
 });
 
 
+gulp.task('connect', function() {
+  connect.server({
+    root: 'build',
+    port: 9420
+  });
+});
+
 gulp.task( 'build', [ 'css', 'html', 'copy-fonts' ]);
 // The default task (called when you run `gulp` from cli)
-gulp.task( 'default', [ 'build', 'watch' ]);
+gulp.task( 'default', [ 'build', 'connect', 'watch' ]);
