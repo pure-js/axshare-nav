@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 var paths = {
   html: [ 'pages/index.jade' ],
   css: [ 'stylesheets/axshare-nav.styl' ],
-  htmlWatch: [ 'pages/*.jade', 'jade/*.jade'],
+  htmlWatch: [ 'pages/*.jade', 'includes/*.jade'],
   cssWatch: [ 'stylesheets/**/*.styl' ],
   fonts: 'fonts/*.{ttf,woff,eof,svg,eot}',
   build: 'build/'
