@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
   jade = require('gulp-jade'),
   stylus = require('gulp-stylus'),
-  connect = require('gulp-connect');
+  connect = require('gulp-connect'),
+  ghPages = require('gulp-gh-pages');
 
 
 var paths = {
@@ -47,6 +48,11 @@ gulp.task('connect', function() {
     root: 'build',
     port: 9420
   });
+});
+
+gulp.task('deploy', function() {
+  gulp.src( paths.build )
+    .pipe(ghPages());
 });
 
 gulp.task( 'build', [ 'css', 'html', 'copy-fonts' ]);
