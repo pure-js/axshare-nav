@@ -51,7 +51,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('deploy', function() {
-  gulp.src( paths.build )
+  gulp.src( 'build/**/*.{html,css,eot,svg,ttf,woff}' )
     .pipe(ghPages());
 });
 
