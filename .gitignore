@@ -16,3 +16,6 @@ dist
 
 # Scraped file
 output.json
+
+# Deploy
+.publish
