@@ -18,15 +18,18 @@ in main.css file do insert SCSS or Stylus
     @import "/bower_components/axshare-nav/stylesheets/axshare-nav";
 
 After that create file axshare-nav, using syntax like in file axsahre-nav.example.jade.
-If you using gulp, you should shure, in what you have a basedir
+If you using gulp, you should shure, what you have a basedir
 
-    .pipe(jade({
-      basedir: './',
-      pretty: true
-    }))
-
+```javascript
+.pipe(jade({
+  basedir: './',
+  pretty: true
+}))
+```
 
 ## Using
 Run the following command
 
 	node app/server.js
+
+Open [localhost:8081/scrape](http://localhost:8081/scrape)
