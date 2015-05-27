@@ -1,3 +1,5 @@
+# Axshure navigation menu
+
 ## Installation
 Install this package using following command:
 
@@ -7,11 +9,11 @@ After that you need run
 
 	npm install
 
-Jade
-
+```jade
     block axshare-nav
-    include axshare-nav
-    include /bower_components/axshare-nav/jade/nav-constructor
+      include axshare-nav
+      include /bower_components/axshare-nav/jade/nav-constructor
+```
 
 in main.css file do insert SCSS or Stylus
 
@@ -30,6 +32,4 @@ If you using gulp, you should shure, what you have a basedir
 ## Using
 Run the following command
 
-	node app/server.js
-
-Open [localhost:8081/scrape](http://localhost:8081/scrape)
+	node app/scraper.js
