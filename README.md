@@ -10,14 +10,16 @@ After that you need run
 	npm install
 
 ```jade
-    block axshare-nav
-      include axshare-nav
-      include /bower_components/axshare-nav/jade/nav-constructor
+block axshare-nav
+  include axshare-nav
+  include /bower_components/axshare-nav/jade/nav-constructor
 ```
 
 in main.css file do insert SCSS or Stylus
 
-    @import "/bower_components/axshare-nav/stylesheets/axshare-nav";
+```stylus
+@import "/bower_components/axshare-nav/stylesheets/axshare-nav";
+```
 
 After that create file axshare-nav, using syntax like in file axsahre-nav.example.jade.
 If you using gulp, you should shure, what you have a basedir

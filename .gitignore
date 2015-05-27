@@ -14,8 +14,8 @@ build
 # Distr
 dist
 
-# Scraped file
-output.json
+# Results file
+output.jade
 
 # Deploy
 .publish

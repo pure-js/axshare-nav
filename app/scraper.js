@@ -1,7 +1,9 @@
+var path = 'for-scraping/example.html';
+
 var express = require('express'),
   cheerio = require('cheerio'),
   fs = require('fs'),
-  $ = cheerio.load(fs.readFileSync('for-scraping/example.html'));
+  $ = cheerio.load(fs.readFileSync( path ));
 
 var name = $('.sitemapTree').text();
 
@@ -12,4 +14,8 @@ $('.sitemapPageName').each(function(i) {
   pages[i] = current;
 });
 
-console.log( pages[7] );
+jadefile = pages;
+
+fs.writeFile('output.jade', jadefile, function(err) {
+  console.log( 'File successfully written! - Check your project directory for the output.jade file' );
+});
