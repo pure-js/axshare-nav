@@ -7,14 +7,15 @@ var express = require('express'),
 
 var name = $('.sitemapTree').text();
 
-var pages = [];
+var jadefile = '';
 
 $('.sitemapPageName').each(function(i) {
   var current = $(this).text();
-  pages[i] = current;
+  var itemName = '  - item.name = ' + '"' + current + '"' + '\r\n';
+  var itemUrl = '  - item.url = "#"' + '\r\n';
+  var item = '- item = {}' + '\r\n' + itemName + itemUrl;
+  jadefile = jadefile + item;
 });
-
-jadefile = pages;
 
 fs.writeFile('output.jade', jadefile, function(err) {
   console.log( 'File successfully written! - Check your project directory for the output.jade file' );
