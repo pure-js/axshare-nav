@@ -11,9 +11,10 @@ var jadefile = '';
 
 $('.sitemapPageName').each(function(i) {
   var current = $(this).text();
-  var itemName = '  - item.name = ' + '"' + current + '"' + '\r\n';
-  var itemUrl = '  - item.url = "#"' + '\r\n';
-  var item = '- item = {}' + '\r\n' + itemName + itemUrl;
+  var item = {};
+  item.name = '  - item.name = ' + '"' + current + '"' + '\r\n';
+  item.url = '  - item.url = "#"' + '\r\n';
+  item = '- item = {}' + '\r\n' + item.name + item.url;
   jadefile = jadefile + item;
 });
 
