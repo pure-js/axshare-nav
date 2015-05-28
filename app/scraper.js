@@ -1,4 +1,10 @@
-var path = 'for-scraping/example.html';
+var path;
+
+process.argv.forEach(function(val, index, array) {
+  if(index === 2) {
+    path = val;
+  }
+});
 
 var express = require('express'),
   cheerio = require('cheerio'),

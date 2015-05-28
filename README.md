@@ -34,4 +34,4 @@ If you using gulp, you should shure, what you have a basedir
 ## Using
 Run the following command
 
-	node app/scraper.js
+	node app/scraper.js for-scraping/example.html
