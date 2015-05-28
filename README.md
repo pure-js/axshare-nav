@@ -8,6 +8,11 @@ Install this package using following command:
 After that you need run
 
     npm install
+<<<<<<< Updated upstream
+=======
+
+Jade
+>>>>>>> Stashed changes
 
 ```jade
 block axshare-nav
@@ -34,5 +39,9 @@ If you using gulp, you should shure, what you have a basedir
 ## Using
 Run the following command
 
+<<<<<<< Updated upstream
     cd axshare-nav
     node app/scraper.js for-scraping/example.html
+=======
+    node app/server.js
+>>>>>>> Stashed changes
