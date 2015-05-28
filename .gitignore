@@ -19,6 +19,3 @@ output.jade
 
 # Deploy
 .publish
-
-# For scraping
-# .for-scraping

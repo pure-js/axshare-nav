@@ -7,7 +7,7 @@ Install this package using following command:
 
 After that you need run
 
-	npm install
+    npm install
 
 ```jade
 block axshare-nav
@@ -15,7 +15,7 @@ block axshare-nav
   include /bower_components/axshare-nav/jade/nav-constructor
 ```
 
-in main.css file do insert SCSS or Stylus
+in main.css file do Stylus insert
 
 ```stylus
 @import "/bower_components/axshare-nav/stylesheets/axshare-nav";
@@ -34,4 +34,5 @@ If you using gulp, you should shure, what you have a basedir
 ## Using
 Run the following command
 
-	node app/scraper.js for-scraping/example.html
+    cd axshare-nav
+    node app/scraper.js for-scraping/example.html
