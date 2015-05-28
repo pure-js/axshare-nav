@@ -14,7 +14,7 @@ $('.sitemapPageName').each(function(i) {
   var item = {};
   item.name = '  - item.name = ' + '"' + current + '"' + '\r\n';
   item.url = '  - item.url = "#"' + '\r\n';
-  item = '- item = {}' + '\r\n' + item.name + item.url;
+  item = '- item = {}' + '\r\n' + item.name + item.url + '\r\n';
   jadefile = jadefile + item;
 });
 
