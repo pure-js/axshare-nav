@@ -9,6 +9,8 @@ After that you need run
 
     npm install
 
+And insert similar code to your jade file
+
 ```jade
 block axshare-nav
   include axshare-nav
