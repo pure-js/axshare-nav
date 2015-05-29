@@ -27,3 +27,5 @@ $('.sitemapPageName').each(function(i) {
 fs.writeFile('output.jade', jadefile, function(err) {
   console.log( 'File successfully written! - Check your project directory for the output.jade file' );
 });
+
+ // TODO: Add ability to create files with current names
