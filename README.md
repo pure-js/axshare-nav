@@ -3,7 +3,7 @@
 ## Installation
 Install this package using following command:
 
-    bower install axshare-nav --save-dev
+    bower install axshare-nav --save
 
 After that you need run
 
