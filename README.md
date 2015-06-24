@@ -17,7 +17,7 @@ block axshare-nav
   include /bower_components/axshare-nav/jade/nav-constructor
 ```
 
-in main.css file do Stylus insert
+in .styl file do insert
 
 ```stylus
 @import "/bower_components/axshare-nav/stylesheets/axshare-nav";

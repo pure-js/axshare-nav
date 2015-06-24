@@ -15,6 +15,14 @@ var name = $('.sitemapTree').text();
 
 var jadefile = '';
 
+
+// Make output directory
+
+fs.mkdir('output', function (err) {
+  if (err) throw err;
+  console.log(err);
+});
+
 $('.sitemapPageName').each(function(i) {
   var current = $(this).text();
   var item = {};
@@ -22,6 +30,12 @@ $('.sitemapPageName').each(function(i) {
   item.url = '  - item.url = "#"' + '\r\n';
   item = '- item = {}' + '\r\n' + item.name + item.url + '\r\n';
   jadefile = jadefile + item;
+
+  var page = 'output/message-' + i;
+
+  fs.writeFile(page, '', function (err) {
+    if (err) throw err;
+  });
 });
 
 fs.writeFile('output.jade', jadefile, function(err) {

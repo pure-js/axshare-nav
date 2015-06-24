@@ -14,7 +14,8 @@ build
 # Distr
 dist
 
-# Results file
+# Results
+output
 output.jade
 
 # Deploy
