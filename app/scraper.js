@@ -16,12 +16,9 @@ var name = $('.sitemapTree').text();
 var jadefile = '';
 
 
-// Make output directory
+// Make output directory if doesn't exist
+fs.mkdir('output');
 
-fs.mkdir('output', function (err) {
-  if (err) throw err;
-  console.log(err);
-});
 
 $('.sitemapPageName').each(function(i) {
   var current = $(this).text();
