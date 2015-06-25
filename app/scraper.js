@@ -28,7 +28,10 @@ $('.sitemapPageName').each(function(i) {
   item = '- item = {}' + '\r\n' + item.name + item.url + '\r\n';
   jadefile = jadefile + item;
 
-  var page = 'output/message-' + i;
+  var pageName = current.toLowerCase().replace(/ /g, "-");
+  console.log(pageName);
+
+  var page = 'output/' + pageName + '.jade';
 
   fs.writeFile(page, '', function (err) {
     if (err) throw err;
