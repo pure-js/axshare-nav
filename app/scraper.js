@@ -19,7 +19,7 @@ var jadefile = '';
 // Make output directory if doesn't exist
 fs.mkdir('output');
 
-
+// Go over each page
 $('.sitemapPageName').each(function(i) {
   var current = $(this).text();
   var item = {};
@@ -41,5 +41,3 @@ $('.sitemapPageName').each(function(i) {
 fs.writeFile('output.jade', jadefile, function(err) {
   console.log( 'File successfully written! - Check your project directory for the output.jade file' );
 });
-
- // TODO: Add ability to create files with current names
