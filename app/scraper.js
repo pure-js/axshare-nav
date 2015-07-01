@@ -9,14 +9,20 @@ process.argv.forEach(function(val, index, array) {
 var express = require('express'),
   cheerio = require('cheerio'),
   fs = require('fs'),
+  request = require('request'),
   $ = cheerio.load(fs.readFileSync( path ));
 
 var name = $('.sitemapTree').text();
 
 var jadefile = '';
 
+request('http://yed0ob.axshare.com/', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body) // Show the HTML for the Google homepage.
+  }
+});
 
-// Make output directory if doesn't exist
+// Make ./output/ directory if it doesn't exist
 fs.mkdir('output');
 
 // Go over each page
@@ -29,7 +35,6 @@ $('.sitemapPageName').each(function(i) {
   jadefile = jadefile + item;
 
   var pageName = current.toLowerCase().replace(/ /g, "-");
-  console.log(pageName);
 
   var page = 'output/' + pageName + '.jade';
 
@@ -38,6 +43,7 @@ $('.sitemapPageName').each(function(i) {
   });
 });
 
+// Create output.jade file with all page titles finded on a web page
 fs.writeFile('output.jade', jadefile, function(err) {
   console.log( 'File successfully written! - Check your project directory for the output.jade file' );
 });

@@ -38,7 +38,9 @@ If you using gulp, you should shure, what you have a basedir
 ```
 
 ## Using
-Run the following command
 
-    cd axshare-nav
+Download web page using Save as... in Google Chrome and run the following comman with path to downloaded file like a second argument
+
     node app/scraper.js for-scraping/example.html
+
+And app will create output directory and output.jade file in te root of current directory
