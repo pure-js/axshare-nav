@@ -9,18 +9,11 @@ process.argv.forEach(function(val, index, array) {
 var express = require('express'),
   cheerio = require('cheerio'),
   fs = require('fs'),
-  request = require('request'),
   $ = cheerio.load(fs.readFileSync( path ));
 
 var name = $('.sitemapTree').text();
 
 var jadefile = '';
-
-request('http://yed0ob.axshare.com/', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    console.log(body) // Show the HTML for the Google homepage.
-  }
-});
 
 // Make ./output/ directory if it doesn't exist
 fs.mkdir('output');
@@ -34,7 +27,9 @@ $('.sitemapPageName').each(function(i) {
   item = '- item = {}' + '\r\n' + item.name + item.url + '\r\n';
   jadefile = jadefile + item;
 
-  var pageName = current.toLowerCase().replace(/ /g, "-");
+  var pageName = current.toLowerCase(); // Add dashes instead of whitespaces and also remove slahes
+  pageName = pageName.replace(/\\/g, '');
+  pageName = pageName.replace(/ /g, "-");
 
   var page = 'output/' + pageName + '.jade';
 
