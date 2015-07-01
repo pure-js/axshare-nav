@@ -1,5 +1,9 @@
 # Axshure navigation menu
 
+App created for
+
+Если у вас есть прототип или скетч в axshare с количеством страниц больше одной, то используя данное приложение аы можете быстро создать все страницы с корректным названием и расширением jade
+
 ## Installation
 Install this package using following command:
 
