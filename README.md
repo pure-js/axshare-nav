@@ -1,6 +1,7 @@
 # Axshure navigation menu
 
 For example http://1zujqg.axshare.com/
+![Axshure link screenshoot](/img/axshare-nav.png?raw=true "Axshure link screenshoot")
 
 Если у вас есть прототип или скетч в axshare с количеством страниц больше одной, то используя данное приложение аы можете быстро создать все страницы с корректным названием и расширением jade
 
