@@ -21,4 +21,4 @@ output.jade
 .publish
 
 # Phantom.js
-output.html
+for-scraping/result.html

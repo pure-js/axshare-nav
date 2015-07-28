@@ -43,6 +43,10 @@ Download web page using Save as... in Google Chrome and run the following comman
 
     node app/scraper.js for-scraping/example.html
 
+or
+
+    node app/scraper.js for-scraping/result.html
+
 And app will create output directory and output.jade file in te root of current directory
 
 Also we have phantom js script, run the following code
