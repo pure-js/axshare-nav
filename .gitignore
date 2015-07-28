@@ -1,4 +1,3 @@
-
 # WebStorm files
 .idea
 
@@ -20,3 +19,7 @@ output.jade
 
 # Deploy
 .publish
+
+# Phantom.js
+output.html
+example.png
