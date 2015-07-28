@@ -1,7 +1,11 @@
-var fs = require('fs');
-var page = require('webpage').create();
+var fs = require('fs'),
+  system = require('system'),
+  page = require('webpage').create();
 
-page.open('http://yed0ob.axshare.com/', function(status) {
+
+var address = system.args[1]; // Get first argument
+
+page.open(address, function(status) {
 
   console.log("Status: " + status);
 

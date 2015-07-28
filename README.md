@@ -41,12 +41,11 @@ Also [Download PhantomJS](http://phantomjs.org/download.html) and ibstall it.
 
 ## Using
 
-### First step
-run PhantomJS, using code below
+Run PhantomJS, using code below
 
-    phantomjs phantom.js
+    phantomjs phantom.js http://yed0ob.axshare.com/
 
-And run the following comman with path to downloaded file like a second argument
+and run the following command with path to downloaded file like a second argument
 
     node app/scraper.js for-scraping/result.html
 
