@@ -9,7 +9,8 @@ process.argv.forEach(function(val, index, array) {
 var express = require('express'),
   cheerio = require('cheerio'),
   fs = require('fs'),
-  $ = cheerio.load(fs.readFileSync( path ));
+  $ = cheerio.load(fs.readFileSync( path )),
+  translit = require('transliteration').slugify;
 
 var name = $('.sitemapTree').text();
 
@@ -27,9 +28,8 @@ $('.sitemapPageName').each(function(i) {
   item = '- item = {}' + '\r\n' + item.name + item.url + '\r\n';
   jadefile = jadefile + item;
 
-  var pageName = current.toLowerCase(); // Add dashes instead of whitespaces and also remove slahes
-  pageName = pageName.replace(/\\/g, '');
-  pageName = pageName.replace(/ /g, "-");
+  var pageName = current.replace(/\\/g, ''); // Remove all slahes
+  pageName = translit(pageName, {lowercase: true, separator: '-'}); // Translitiration of words
 
   var page = 'output/' + pageName + '.jade';
 
