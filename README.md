@@ -37,18 +37,21 @@ If you using gulp, you should shure, what you have a basedir
 }))
 ```
 
+Also [Download PhantomJS](http://phantomjs.org/download.html) and ibstall it.
+
 ## Using
 
-Download web page using Save as... in Google Chrome and run the following comman with path to downloaded file like a second argument
+### First step
+run PhantomJS, using code below
 
-    node app/scraper.js for-scraping/example.html
+    phantomjs phantom.js
 
-or
+And run the following comman with path to downloaded file like a second argument
 
     node app/scraper.js for-scraping/result.html
 
-And app will create output directory and output.jade file in te root of current directory
+or if you just want to test it
 
-Also we have phantom js script, run the following code
+    node app/scraper.js for-scraping/example.html
 
-    phantomjs phantom.js
+And app will create output directory with all menu items and output.jade file in te root of current directory
