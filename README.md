@@ -9,7 +9,7 @@ Install this package using following command:
 
     bower install axshare-nav --save
 
-After that you need run
+Then run the following command
 
     npm install
 
@@ -28,7 +28,7 @@ in .styl file do insert
 ```
 
 After that create file axshare-nav, using syntax like in file axsahre-nav.example.jade.
-If you using gulp, you should shure, what you have a basedir
+If you using gulp, you should be shure, what you have a basedir
 
 ```javascript
 .pipe(jade({
