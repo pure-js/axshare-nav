@@ -22,3 +22,5 @@ output.jade
 
 # Phantom.js
 for-scraping/result.html
+
+.DS_Store
