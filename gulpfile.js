@@ -1,14 +1,10 @@
-var gulp = require('gulp'),
-  jade = require('gulp-jade'),
-  stylus = require('gulp-stylus'),
-  connect = require('gulp-connect'),
-  ghPages = require('gulp-gh-pages');
+const gulp = require('gulp'),
+  plugins = require('gulp-load-plugins')();
 
-
-var paths = {
-  html: [ 'pages/index.jade' ],
+const paths = {
+  html: [ 'pages/index.pug' ],
   css: [ 'stylesheets/axshare-nav.styl' ],
-  htmlWatch: [ 'pages/*.jade', 'includes/*.jade'],
+  htmlWatch: [ 'pages/*.pug', 'includes/*.pug'],
   cssWatch: [ 'stylesheets/**/*.styl' ],
   fonts: 'fonts/*.{ttf,woff,eof,svg,eot}',
   build: 'build/'
@@ -17,7 +13,7 @@ var paths = {
 
 gulp.task( 'html', function() {
   gulp.src( paths.html )
-    .pipe(jade({
+    .pipe(plugins.pug({
       basedir: './',
       pretty: true
     }))
@@ -26,7 +22,7 @@ gulp.task( 'html', function() {
 
 gulp.task( 'css', function() {
   gulp.src( paths.css )
-    .pipe(stylus())
+    .pipe(plugins.stylus())
     .pipe(gulp.dest( paths.build + 'css/' ));
 });
 
@@ -44,15 +40,15 @@ gulp.task( 'watch', function() {
 
 
 gulp.task('connect', function() {
-  connect.server({
+  plugins.connect.server({
     root: 'build',
     port: 9420
   });
 });
 
 gulp.task('deploy', function() {
-  gulp.src( 'build/**/*.{html,css,eot,svg,ttf,woff}' )
-    .pipe(ghPages());
+  gulp.src('build/**/*')
+    .pipe(plugins.ghPages());
 });
 
 gulp.task( 'build', [ 'css', 'html', 'copy-fonts' ]);

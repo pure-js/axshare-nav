@@ -2,7 +2,7 @@
   "name": "axshare-nav",
   "version": "v0.0.6",
   "authors": [
-    "IamEmpty <dustonroad@gmail.com>"
+    "pure-js"
   ],
   "description": "Navigation menu for axshare projects. Using jade + SCSS",
   "main": "README.md",
@@ -13,12 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/IamEmpty/axshare-nav.git"
+    "url": "https://github.com/pure-js/axshare-nav.git"
   },
   "ignore": [
     ".idea",
     "node_modules"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/IamEmpty/axshare-nav"
+  "homepage": "https://pure-js.github.io/axshare-nav"
 }
