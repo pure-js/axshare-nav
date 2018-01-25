@@ -1,4 +1,4 @@
-# Axshure navigation menu
+# Axure navigation menu
 
 If you have Axure RP prototypes, and should repit thir structre, that package will help you. For example http://1zujqg.axshare.com/
 
