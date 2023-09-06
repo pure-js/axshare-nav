@@ -1,6 +1,10 @@
 # Axure navigation menu
 
-If you have Axure RP prototypes, and should repit thir structre, that package will help you. For example http://1zujqg.axshare.com/
+> ## Farewell, Axure Share
+> Axure Share has been retired. Now, you can host, share, inspect, and gather feedback on your Axure RP prototypes with Axure Cloud.
+> If you have Axure RP prototypes, and should repit thir structre, that package will help you. For example http://1zujqg.axshare.com/
+
+In accordance with the above information, this project cannot be considered relevant and will be archived
 
 ![Axshure link screenshoot](/img/axshare-nav.png?raw=true "Axshure link screenshoot")
 
